@@ -600,7 +600,7 @@ ul {
   margin-top: 0;
   padding-bottom: 5px;
   position: relative;
-  color: #ABC502;
+  color: #0CBB0E;
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase; }
@@ -689,7 +689,7 @@ blockquote {
   padding: 15px 20px;
   background-color: #f6f6f6;
   margin: 0 0 20px;
-  border-left: 5px solid #ABC502;
+  border-left: 5px solid #0CBB0E;
   font-style: italic; }
 
 blockquote.quote {
@@ -721,9 +721,9 @@ blockquote.quote {
   margin: 5px 3px; }
 .owl-theme .owl-dots .owl-dot.active span {
   width: 20px;
-  background-color: #ABC502; }
+  background-color: #0CBB0E; }
 .owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #ABC502; }
+  background-color: #0CBB0E; }
 .owl-theme .owl-controls {
   margin-top: 50px; }
 
@@ -734,9 +734,9 @@ blockquote.quote {
   margin: 5px 3px; }
 .owl-light .owl-dots .owl-dot.active span {
   width: 20px;
-  background-color: #ABC502; }
+  background-color: #0CBB0E; }
 .owl-light .owl-dots .owl-dot:hover span {
-  background-color: #ABC502; }
+  background-color: #0CBB0E; }
 .owl-light .owl-controls {
   margin-top: 50px; }
 
@@ -1107,7 +1107,7 @@ SOSMED-ICON
   margin: 0 2px; }
   .sosmed-icon.icon-bg-secondary a:hover {
     color: #000000;
-    background-color: #ABC502; }
+    background-color: #0CBB0E; }
 
 /* ==========================
 FEATURE ICON
@@ -1386,7 +1386,7 @@ ICON 2
   .rs-icon-info .fa {
     width: 60px;
     height: 60px;
-    background-color: #ABC502;
+    background-color: #0CBB0E;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -1413,7 +1413,7 @@ ICON 2
       background-color: transparent;
       font-size: 40px; }
       .rs-icon-info.center .fa.bl {
-        background-color: #ABC502;
+        background-color: #0CBB0E;
         color: #ffffff;
         width: 80px;
         height: 80px; }
@@ -1512,7 +1512,7 @@ ICON 2
       display: block; }
   .rs-icon-info-3:hover .info-icon .fa {
     color: #ffffff;
-    background-color: #ABC502;
+    background-color: #0CBB0E;
     -webkit-animation-name: hvr-icon-push;
     animation-name: hvr-icon-push;
     -webkit-animation-duration: 0.3s;
@@ -1546,14 +1546,14 @@ ICON 2
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  border-bottom: 2px solid #ABC502; }
+  border-bottom: 2px solid #0CBB0E; }
   .rs-icon-info-4 .icon {
     padding-top: 30px; }
   .rs-icon-info-4 .fa {
     width: 70px;
     height: 70px;
     color: #ffffff;
-    background-color: #ABC502;
+    background-color: #0CBB0E;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -1576,14 +1576,14 @@ FACT
   .rs-icon-funfact .icon {
     display: block;
     font-size: 42px;
-    color: #ABC502;
+    color: #0CBB0E;
     text-align: center; }
   .rs-icon-funfact .body-content h1, .rs-icon-funfact .body-content h2, .rs-icon-funfact .body-content .banner-page .title-page, .banner-page .rs-icon-funfact .body-content .title-page, .rs-icon-funfact .body-content h3, .rs-icon-funfact .body-content h4, .rs-icon-funfact .body-content .rs-team-1 .title, .rs-team-1 .rs-icon-funfact .body-content .title, .rs-icon-funfact .body-content .rs-team-single .title, .rs-team-single .rs-icon-funfact .body-content .title, .rs-icon-funfact .body-content h4, .rs-icon-funfact .body-content .rs-team-1 .title, .rs-team-1 .rs-icon-funfact .body-content .title, .rs-icon-funfact .body-content .rs-team-single .title, .rs-team-single .rs-icon-funfact .body-content .title, .rs-icon-funfact .body-content h5, .rs-icon-funfact .body-content h6 {
     clear: none;
     margin-bottom: 0;
     color: #ffffff; }
   .rs-icon-funfact .body-content p {
-    color: #ABC502; }
+    color: #0CBB0E; }
 
 .rs-funfact {
   text-align: center;
@@ -1614,7 +1614,7 @@ FACT
       width: 100%;
       text-align: center; }
   .rs-funfact.bg-primary .box-fun:before {
-    background-color: #ABC502; }
+    background-color: #0CBB0E; }
   .rs-funfact.bg-secondary .box-fun:before {
     background-color: #000000; }
   .rs-funfact.bg-tertiary .box-fun:before {
@@ -1636,7 +1636,7 @@ CLASSES
     font-family: "Lato", sans-serif;
     color: #000;
     font-style: italic;
-    background-color: #ABC502;
+    background-color: #0CBB0E;
     padding: 15px 30px; }
   .rs-class-box .price {
     font-size: 24px;
@@ -1661,7 +1661,7 @@ CLASSES
     margin-right: -15px;
     padding: 10px 30px; }
     .rs-class-box .detail .fa {
-      color: #ABC502;
+      color: #0CBB0E;
       margin-right: 7px; }
   .rs-class-box .sosmed-icon a {
     font-size: 14px; }
