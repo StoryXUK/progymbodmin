@@ -1143,3 +1143,58 @@
 })(jQuery);
 
 
+
+// Gallery //
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const itemsPerPage = 9;
+    const totalItems = 27; // Change this to your total number of items
+    const portfolioItems = document.getElementById('portfolio-items');
+    const pagination = document.getElementById('pagination');
+    const nextPageLink = pagination.querySelector('.next');
+    let currentPage = 1;
+
+    function showItems(page) {
+        portfolioItems.innerHTML = '';
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        for (let i = start; i < Math.min(end, totalItems); i++) {
+            portfolioItems.innerHTML += `
+                <div class="col-md-4">
+                    <div class="portfolio-thumb">
+                        <a class="popup-image icon-btn" href="assets/img/portfolio/portfolio1_${i + 1}.jpg"><i class="far fa-eye"></i></a>
+                        <img src="assets/img/portfolio/portfolio1_${i + 1}.jpg" alt="portfolio">
+                    </div>
+                </div>
+            `;
+        }
+    }
+
+    function setActivePage(page) {
+        const pageLinks = pagination.querySelectorAll('.page-link');
+        pageLinks.forEach(link => {
+            if (link.textContent === page.toString()) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    function goToNextPage() {
+        if (currentPage < Math.ceil(totalItems / itemsPerPage)) {
+            currentPage++;
+            showItems(currentPage);
+            setActivePage(currentPage);
+        }
+    }
+
+    nextPageLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        goToNextPage();
+    });
+
+    showItems(currentPage);
+    setActivePage(currentPage);
+});
