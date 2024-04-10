@@ -1787,15 +1787,14 @@ textarea.is-invalid {
   visibility: hidden;
 }
 .mobile-menu-wrapper .mobile-logo {
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-top: 40px;
   display: block;
   text-align: center;
   background-color: var(--smoke-color2);
-  width: 100%;
 }
 .mobile-menu-wrapper .mobile-logo svg {
-  min-width: 250px !important;
+  max-width: 185px;
 }
 .mobile-menu-wrapper .menu-toggle {
   border: none;
