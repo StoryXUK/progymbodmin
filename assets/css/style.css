@@ -4844,6 +4844,7 @@ ul.wp-block-latest-posts li:last-child {
 .header-logo {
   padding-top: 15px;
   padding-bottom: 15px;
+  max-width: 180px;
 }
 
 .header-links > ul {
