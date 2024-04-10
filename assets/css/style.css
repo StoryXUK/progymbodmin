@@ -1792,9 +1792,10 @@ textarea.is-invalid {
   display: block;
   text-align: center;
   background-color: var(--smoke-color2);
+  width: 100%;
 }
 .mobile-menu-wrapper .mobile-logo svg {
-  min-width: 230px !important;
+  min-width: 250px !important;
 }
 .mobile-menu-wrapper .menu-toggle {
   border: none;
