@@ -860,7 +860,7 @@ input[type=checkbox].style2 ~ label {
 }
 input[type=checkbox].style2 ~ label:before {
   background-color: white;
-  border: 1px solid rgb(247, 204, 215);
+  border: 1px solid rgb(180, 220, 193);
   height: 14px;
   width: 14px;
   line-height: 14px;
@@ -1269,11 +1269,11 @@ textarea.is-invalid {
   padding: 0 0;
 }
 .mobile-menu ul li {
-  border-bottom: 1px solid #fdedf1;
+  border-bottom: 1px solid #e8f5ed;
   list-style-type: none;
 }
 .mobile-menu ul li li:first-child {
-  border-top: 1px solid #fdedf1;
+  border-top: 1px solid #e8f5ed;
 }
 .mobile-menu ul li a {
   display: block;
