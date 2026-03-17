@@ -141,7 +141,11 @@
         });
     };
 
-    $(".mobile-menu-wrapper").mobilemenu();
+    function initNav() {
+        $(".mobile-menu-wrapper").mobilemenu();
+        popupSideMenu('.sidemenu-wrapper', '.sideMenuToggler', '.sideMenuCls', 'show');
+    }
+    document.addEventListener('navLoaded', initNav);
 
     /*---------- 04. Sticky fix ----------*/
     $(window).scroll(function () {
@@ -565,7 +569,7 @@
         $($sideMenu).removeClass($toggleCls);
         });
     };
-    popupSideMenu('.sidemenu-wrapper', '.sideMenuToggler', '.sideMenuCls', 'show');
+
 
     /*----------- 13. Magnific Popup ----------*/
     /* magnificPopup img view */
