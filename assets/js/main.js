@@ -462,7 +462,7 @@
                 thickness: 7,
                 emptyFill: "#2C2C2C",
                 fill: {
-                    color: '#F41E1E'
+                    color: '#2a9146'
                 }
                 }).on('circle-animation-progress', function (event, progress, stepValue) {
                 $(this).find('.circle-num').text((stepValue*100).toFixed(0) + "%");
