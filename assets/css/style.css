@@ -14673,7 +14673,7 @@ span.select2-selection.select2-selection--single:focus {
 /* Gallery video section */
 .gallery-video {
   display: block;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
-  border-radius: 8px;
+  border-radius: 15px;
 }
