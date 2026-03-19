@@ -14670,6 +14670,13 @@ span.select2-selection.select2-selection--single:focus {
   }
 }
 
+/* Gallery page: about-thumb has no secondary image so remove the padding that causes overflow */
+.gallery-about .about-thumb {
+  padding-right: 0;
+  display: block;
+  width: 100%;
+}
+
 /* Gallery video section */
 .gallery-video {
   display: block;
