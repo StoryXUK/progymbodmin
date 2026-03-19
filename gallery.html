@@ -86,10 +86,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcumb-content">
-                        <h1 class="breadcumb-title">Our Gallery</h1>
+                        <h1 class="breadcumb-title">Our Equipment</h1>
                         <ul class="breadcumb-menu">
                             <li><a href="index.html">HOME</a></li>
-                            <li class="active">GALLERY</li>
+                            <li class="active">Our Equipment</li>
                         </ul>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
     <div class="space">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-2 mb-lg-0">
+                <div class="col-lg-6 mb-lg-0">
                     <div class="about-thumb">
                         <img class="about-img-1" src="assets/img/portfolio/dumbbells.jpeg"
                             alt="Supplements at Pro Gym Bodmin" style="border-radius: 15px; width: 100%;">
@@ -110,7 +110,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="title-area mb-0">
-                        <span class="sub-title">Trusted by elite athlete</span>
+                        <span class="sub-title">Trusted by elite athletes</span>
                         <h2 class="sec-title">Premium, British-made equipment</h2>
                         <p class="sec-text">Our gym is equipped with premium, British-made equipment from Watson,
                             engineered and manufactured in Frome, Somerset. Every piece reflects a commitment to
@@ -133,11 +133,11 @@
     <!--==============================
         Video Section
     ==============================-->
-    <div class="video-section-area space-top">
+    <div class="video-section-area">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <video class="gallery-video" controls playsinline>
+                    <video id="gallery-video" class="gallery-video" controls playsinline muted>
                         <source src="assets/videos/progym-video.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -382,6 +382,12 @@
     <!-- Main Js File -->
     <script src="assets/js/nav-loader.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        setTimeout(function () {
+            var v = document.getElementById("gallery-video");
+            if (v) { v.muted = true; v.play(); }
+        }, 3000);
+    </script>
 </body>
 
 </html>
