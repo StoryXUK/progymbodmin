@@ -87,7 +87,7 @@
     ==============================-->
     <div class="hero-wrapper hero-1" id="hero">
         <!-- Video background -->
-        <video class="hero-video-bg" autoplay muted loop playsinline>
+        <video class="hero-video-bg" muted loop playsinline>
             <source src="assets/videos/progym-video.mp4" type="video/mp4">
         </video>
         <div class="global-carousel" id="heroSlider1" data-fade="true" data-slide-show="1" data-lg-slide-show="1"
@@ -1166,6 +1166,21 @@
     <!-- Main Js File -->
     <script src="assets/js/nav-loader.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        (function () {
+            var v = document.querySelector(".hero-video-bg");
+            if (!v) return;
+            function startVideo() {
+                v.play();
+                ["click","touchstart","keydown"].forEach(function(e) {
+                    document.removeEventListener(e, startVideo);
+                });
+            }
+            ["click","touchstart","keydown"].forEach(function(e) {
+                document.addEventListener(e, startVideo, { once: true, passive: true });
+            });
+        })();
+    </script>
 </body>
 
 </html>

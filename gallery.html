@@ -137,7 +137,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <video id="gallery-video" class="gallery-video" controls playsinline muted poster="assets/videos/progym-poster.jpg">
+                    <video id="gallery-video" class="gallery-video" muted loop playsinline poster="assets/videos/progym-poster.jpg">
                         <source src="assets/videos/progym-video.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -383,10 +383,19 @@
     <script src="assets/js/nav-loader.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        setTimeout(function () {
+        (function () {
             var v = document.getElementById("gallery-video");
-            if (v) { v.muted = true; v.play(); }
-        }, 3000);
+            if (!v) return;
+            function startVideo() {
+                v.play();
+                ["click","touchstart","keydown"].forEach(function(e) {
+                    document.removeEventListener(e, startVideo);
+                });
+            }
+            ["click","touchstart","keydown"].forEach(function(e) {
+                document.addEventListener(e, startVideo, { once: true, passive: true });
+            });
+        })();
     </script>
 </body>
 
