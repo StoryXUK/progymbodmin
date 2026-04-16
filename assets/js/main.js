@@ -168,16 +168,16 @@
     })
 
     /*---------- 05. Scroll To Top ----------*/
-    // progressAvtivation
-    if($('.scroll-top')) {    
+    function initScrollTop() {
         var scrollTopbtn = document.querySelector('.scroll-top');
+        if (!scrollTopbtn) return;
         var progressPath = document.querySelector('.scroll-top path');
         var pathLength = progressPath.getTotalLength();
         progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
         progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
         progressPath.style.strokeDashoffset = pathLength;
         progressPath.getBoundingClientRect();
-        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';		
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
         var updateProgress = function () {
             var scroll = $(window).scrollTop();
             var height = $(document).height() - $(window).height();
@@ -185,31 +185,39 @@
             progressPath.style.strokeDashoffset = progress;
         }
         updateProgress();
-        $(window).scroll(updateProgress);	
+        $(window).scroll(updateProgress);
         var offset = 50;
-        var duration = 750;
         jQuery(window).on('scroll', function() {
             if (jQuery(this).scrollTop() > offset) {
                 jQuery(scrollTopbtn).addClass('show');
             } else {
                 jQuery(scrollTopbtn).removeClass('show');
             }
-        });				
+        });
         jQuery(scrollTopbtn).on('click', function(event) {
             event.preventDefault();
             jQuery('html, body').animate({scrollTop: 0}, 1);
             return false;
-        })
+        });
     }
 
     /*---------- 06. Set Background Image ----------*/
-    if ($("[data-bg-src]").length > 0) {
+    function initBgSrc() {
         $("[data-bg-src]").each(function () {
             var src = $(this).attr("data-bg-src");
             $(this).css("background-image", "url(" + src + ")");
             $(this).removeAttr("data-bg-src").addClass("background-image");
         });
     }
+
+    function initFooter() {
+        initScrollTop();
+        initBgSrc();
+    }
+
+    // Run bg-src immediately for elements already in the DOM (breadcrumb, CTA, etc.)
+    initBgSrc();
+    document.addEventListener('footerLoaded', initFooter);
 
     /*----------- 07. Global Slider ----------*/
     $(".global-carousel").each(function () {
