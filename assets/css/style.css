@@ -13819,6 +13819,16 @@ span.select2-selection.select2-selection--single:focus {
   transform: translate(-50%, -50%);
 }
 
+#portfolio-items .portfolio-thumb {
+  aspect-ratio: 2 / 3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#portfolio-items .portfolio-thumb img {
+  height: 100%;
+  object-fit: cover;
+}
+
 /*****single-project-details-wrap*****/
 .project-details-single-page .thumb {
   border-radius: 20px 20px 0 0;
