@@ -61,6 +61,85 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <style>
+        .google-reviews-widget {
+            position: fixed;
+            left: 24px;
+            bottom: 24px;
+            z-index: 999;
+            display: flex;
+            box-sizing: border-box;
+            width: 315px;
+            height: 105px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 7px;
+            background: #ffffff;
+            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.18);
+            color: #3c4043;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .google-reviews-widget__content {
+            text-align: center;
+        }
+
+        .google-reviews-widget__brand,
+        .google-reviews-widget__rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .google-reviews-widget__brand {
+            gap: 6px;
+            margin-bottom: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .google-reviews-widget__logo {
+            width: 20px;
+            height: 20px;
+            flex: 0 0 20px;
+        }
+
+        .google-reviews-widget__rating {
+            gap: 7px;
+            line-height: 1;
+        }
+
+        .google-reviews-widget__score {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .google-reviews-widget__stars {
+            color: #f9ab00;
+            font-size: 18px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .google-reviews-widget__count {
+            margin: 4px 0 0;
+            color: #70757a;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 370px) {
+            .google-reviews-widget {
+                right: 16px;
+                bottom: 16px;
+                left: 16px;
+                width: auto;
+            }
+        }
+    </style>
+
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1304,6 +1383,25 @@
         </div>
     </div>
 </footer>
+
+<aside class="google-reviews-widget" aria-label="Google review rating">
+    <div class="google-reviews-widget__content">
+        <div class="google-reviews-widget__brand">
+            <svg class="google-reviews-widget__logo" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.4-.18-2.07H12v3.92h5.38a4.6 4.6 0 0 1-2 3.02v2.54h3.24c1.9-1.75 2.98-4.33 2.98-7.41Z"/>
+                <path fill="#34A853" d="M12 22c2.7 0 4.98-.9 6.63-2.42l-3.24-2.54c-.9.6-2.05.96-3.39.96-2.61 0-4.82-1.76-5.61-4.13H3.04v2.62A10 10 0 0 0 12 22Z"/>
+                <path fill="#FBBC05" d="M6.39 13.87A6.02 6.02 0 0 1 6.08 12c0-.65.11-1.28.31-1.87V7.51H3.04A10 10 0 0 0 2 12c0 1.61.39 3.14 1.04 4.49l3.35-2.62Z"/>
+                <path fill="#EA4335" d="M12 6.02c1.47 0 2.79.5 3.82 1.5l2.88-2.87A9.64 9.64 0 0 0 12 2a10 10 0 0 0-8.96 5.51l3.35 2.62C7.18 7.78 9.39 6.02 12 6.02Z"/>
+            </svg>
+            <span>Google</span>
+        </div>
+        <div class="google-reviews-widget__rating">
+            <span class="google-reviews-widget__score">5.0</span>
+            <span class="google-reviews-widget__stars" aria-label="5 out of 5 stars">★★★★★</span>
+        </div>
+        <p class="google-reviews-widget__count">Based on 61 reviews</p>
+    </div>
+</aside>
 
 <div class="scroll-top">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">

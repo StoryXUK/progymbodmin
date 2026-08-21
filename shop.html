@@ -1,0 +1,807 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Supplements Shop | Pro Gym Bodmin</title>
+    <meta name="description" content="Explore protein, creatine, pre-workout, recovery supplements and gym snacks coming soon to the Pro Gym Bodmin shop.">
+    <meta name="keywords" content="gym supplements Bodmin, protein powder Cornwall, creatine, pre-workout, sports nutrition">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:title" content="Supplements Shop | Pro Gym Bodmin">
+    <meta property="og:description" content="Fuel your training with supplements and sports nutrition from Pro Gym Bodmin.">
+    <meta property="og:image" content="assets/img/product/IMG_4416%202.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pro Gym Bodmin">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon.png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="theme-color" content="#1c1c1c">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Kumbh+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .shop-page {
+            --shop-ink: #171917;
+            --shop-muted: #687068;
+            --shop-green: #2a9146;
+            --shop-green-dark: #1d6f34;
+            --shop-lime: #b7e13c;
+            --shop-surface: #f3f5f1;
+            color: var(--shop-ink);
+            background: #fff;
+        }
+
+        .shop-page *,
+        .shop-page *::before,
+        .shop-page *::after {
+            box-sizing: border-box;
+        }
+
+        .shop-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 92px 0 76px;
+            background: #141714;
+            color: #fff;
+        }
+
+        .shop-hero::before {
+            content: "";
+            position: absolute;
+            width: 520px;
+            height: 520px;
+            top: -280px;
+            left: -160px;
+            border-radius: 50%;
+            border: 95px solid rgba(183, 225, 60, .08);
+        }
+
+        .shop-hero__crumbs {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin: 0 0 28px;
+            padding: 0;
+            color: rgba(255, 255, 255, .62);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .08em;
+            list-style: none;
+            text-transform: uppercase;
+        }
+
+        .shop-hero__crumbs a { color: #fff; }
+        .shop-hero__crumbs i { color: var(--shop-lime); font-size: 9px; }
+
+        .shop-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 15px;
+            color: var(--shop-lime);
+            font-family: var(--title-font);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+        }
+
+        .shop-kicker::before {
+            content: "";
+            width: 28px;
+            height: 2px;
+            background: currentColor;
+        }
+
+        .shop-hero h1 {
+            max-width: 650px;
+            margin: 0 0 20px;
+            color: #fff;
+            font-size: clamp(48px, 6.5vw, 82px);
+            font-weight: 700;
+            line-height: .96;
+            letter-spacing: -.025em;
+            text-transform: uppercase;
+        }
+
+        .shop-hero h1 span { color: var(--shop-lime); }
+
+        .shop-hero__copy {
+            max-width: 580px;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, .72);
+            font-size: 17px;
+            line-height: 1.75;
+        }
+
+        .shop-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+        .shop-primary-btn,
+        .shop-secondary-btn {
+            display: inline-flex;
+            min-height: 50px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 23px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            font-family: var(--title-font);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            transition: .25s ease;
+        }
+
+        .shop-primary-btn { background: var(--shop-green); color: #fff; }
+        .shop-primary-btn:hover { background: var(--shop-lime); color: var(--shop-ink); }
+        .shop-secondary-btn { border-color: rgba(255,255,255,.35); color: #fff; }
+        .shop-secondary-btn:hover { border-color: #fff; background: #fff; color: var(--shop-ink); }
+
+        .shop-hero__photo-wrap {
+            position: relative;
+            max-width: 500px;
+            margin-left: auto;
+        }
+
+        .shop-hero__photo {
+            display: block;
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 28px 70px rgba(0, 0, 0, .42);
+        }
+
+        .shop-hero__badge {
+            position: absolute;
+            right: -24px;
+            bottom: 34px;
+            width: 145px;
+            height: 145px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 7px solid #141714;
+            border-radius: 50%;
+            background: var(--shop-lime);
+            color: var(--shop-ink);
+            font-family: var(--title-font);
+            line-height: 1;
+            text-align: center;
+            text-transform: uppercase;
+            transform: rotate(-7deg);
+        }
+
+        .shop-hero__badge strong { font-size: 25px; font-weight: 800; }
+        .shop-hero__badge span { margin-top: 6px; font-size: 12px; font-weight: 600; letter-spacing: .08em; }
+
+        .shop-benefits {
+            position: relative;
+            z-index: 2;
+            padding: 25px 0;
+            border-bottom: 1px solid #e4e8e1;
+            background: #fff;
+        }
+
+        .shop-benefit {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 7px 12px;
+        }
+
+        .shop-benefit__icon {
+            width: 46px;
+            height: 46px;
+            display: grid;
+            flex: 0 0 46px;
+            place-items: center;
+            border-radius: 50%;
+            background: #edf7e8;
+            color: var(--shop-green);
+            font-size: 17px;
+        }
+
+        .shop-benefit strong {
+            display: block;
+            margin-bottom: 2px;
+            font-family: var(--title-font);
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .shop-benefit span { color: var(--shop-muted); font-size: 13px; }
+
+        .shop-catalogue { padding: 105px 0 115px; }
+
+        .shop-heading-row {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 28px;
+            margin-bottom: 42px;
+        }
+
+        .shop-heading-row h2 {
+            margin: 0;
+            color: var(--shop-ink);
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .shop-heading-row p { max-width: 480px; margin: 0; color: var(--shop-muted); line-height: 1.7; }
+
+        .shop-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 40px;
+            padding: 16px;
+            border: 1px solid #e1e5df;
+            border-radius: 9px;
+            background: var(--shop-surface);
+        }
+
+        .shop-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .shop-filter {
+            min-height: 42px;
+            padding: 8px 17px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            background: transparent;
+            color: #4d554d;
+            font-family: var(--title-font);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .shop-filter:hover,
+        .shop-filter.is-active { background: var(--shop-ink); color: #fff; }
+
+        .shop-search {
+            position: relative;
+            width: min(100%, 285px);
+            flex: 0 0 auto;
+        }
+
+        .shop-search i {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            color: #798079;
+            transform: translateY(-50%);
+        }
+
+        .shop-search input {
+            width: 100%;
+            height: 44px;
+            padding: 9px 14px 9px 42px;
+            border: 1px solid #dbe0d8;
+            border-radius: 5px;
+            background: #fff;
+            color: var(--shop-ink);
+            font-size: 14px;
+        }
+
+        .shop-search input:focus { border-color: var(--shop-green); outline: 3px solid rgba(42,145,70,.12); }
+
+        .shop-results-meta {
+            display: flex;
+            justify-content: space-between;
+            margin: -18px 0 22px;
+            color: var(--shop-muted);
+            font-size: 13px;
+        }
+
+        .shop-product-card {
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid #e2e6df;
+            border-radius: 10px;
+            background: #fff;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .shop-product-card:hover { transform: translateY(-7px); box-shadow: 0 20px 45px rgba(18, 28, 20, .1); }
+        .shop-product-card[hidden] { display: none !important; }
+
+        .shop-product-card__visual {
+            position: relative;
+            height: 275px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(145deg, #f6f8f4, #e9eee6);
+        }
+
+        .shop-product-card__visual::after {
+            content: "";
+            position: absolute;
+            width: 190px;
+            height: 24px;
+            bottom: 32px;
+            border-radius: 50%;
+            background: rgba(20, 25, 20, .12);
+            filter: blur(7px);
+        }
+
+        .shop-product-card__tag {
+            position: absolute;
+            z-index: 3;
+            top: 17px;
+            left: 17px;
+            padding: 6px 10px;
+            border-radius: 4px;
+            background: var(--shop-ink);
+            color: #fff;
+            font-family: var(--title-font);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .07em;
+            text-transform: uppercase;
+        }
+
+        .shop-pack {
+            --pack-accent: #2a9146;
+            position: relative;
+            z-index: 2;
+            width: 145px;
+            height: 170px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px 15px 22px 22px;
+            background: linear-gradient(95deg, #1b1e1b, #353a35 55%, #171917);
+            box-shadow: inset 10px 0 16px rgba(255,255,255,.05), 0 16px 22px rgba(15,20,15,.18);
+            color: #fff;
+            font-family: var(--title-font);
+            text-align: center;
+            transform: rotate(-2deg);
+        }
+
+        .shop-pack::before {
+            content: "";
+            position: absolute;
+            width: calc(100% + 8px);
+            height: 22px;
+            top: -14px;
+            left: -4px;
+            border-radius: 8px 8px 4px 4px;
+            background: repeating-linear-gradient(90deg, #171917 0 4px, #2d312d 4px 7px);
+            box-shadow: 0 3px 4px rgba(0,0,0,.2);
+        }
+
+        .shop-pack::after {
+            content: "";
+            position: absolute;
+            inset: 56px 0 31px;
+            z-index: -1;
+            background: var(--pack-accent);
+            clip-path: polygon(0 13%, 100% 0, 100% 83%, 0 100%);
+        }
+
+        .shop-pack__brand { font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+        .shop-pack strong { margin: 9px 8px 4px; font-size: 24px; font-weight: 800; line-height: .85; text-transform: uppercase; }
+        .shop-pack small { font-size: 9px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+        .shop-pack--blue { --pack-accent: #3479ca; transform: rotate(2deg); }
+        .shop-pack--orange { --pack-accent: #ed7d27; }
+        .shop-pack--pink { --pack-accent: #c74f7c; transform: rotate(2deg); }
+        .shop-pack--purple { --pack-accent: #7549aa; }
+        .shop-pack--lime { --pack-accent: #79ad31; transform: rotate(2deg); }
+
+        .shop-pack--pouch {
+            height: 180px;
+            border-radius: 5px 5px 14px 14px;
+            clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
+        }
+
+        .shop-pack--pouch::before { height: 10px; top: 5px; border-radius: 0; }
+
+        .shop-pack--bars {
+            width: 175px;
+            height: 112px;
+            border-radius: 7px;
+        }
+
+        .shop-pack--bars::before { display: none; }
+        .shop-pack--bars::after { inset: 20px 0; clip-path: polygon(0 10%,100% 0,100% 88%,0 100%); }
+
+        .shop-product-card__body { padding: 23px 23px 24px; }
+
+        .shop-product-card__category {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--shop-green);
+            font-family: var(--title-font);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .shop-product-card h3 { margin: 0 0 9px; color: var(--shop-ink); font-size: 22px; line-height: 1.2; }
+        .shop-product-card__copy { min-height: 52px; margin: 0 0 17px; color: var(--shop-muted); font-size: 14px; line-height: 1.65; }
+
+        .shop-product-card__footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding-top: 17px;
+            border-top: 1px solid #e8ebe6;
+        }
+
+        .shop-product-card__status strong { display: block; font-family: var(--title-font); font-size: 16px; }
+        .shop-product-card__status span { color: var(--shop-muted); font-size: 11px; }
+
+        .shop-enquire-btn {
+            display: inline-flex;
+            min-height: 39px;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 8px 13px;
+            border-radius: 4px;
+            background: var(--shop-green);
+            color: #fff;
+            font-family: var(--title-font);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .shop-enquire-btn:hover { background: var(--shop-ink); color: #fff; }
+
+        .shop-empty {
+            padding: 54px 20px;
+            border: 1px dashed #cbd2c8;
+            border-radius: 9px;
+            color: var(--shop-muted);
+            text-align: center;
+        }
+
+        .shop-empty i { display: block; margin-bottom: 13px; color: var(--shop-green); font-size: 28px; }
+
+        .shop-stock-section { padding: 0 0 115px; }
+
+        .shop-stock-card {
+            position: relative;
+            overflow: hidden;
+            padding: 66px;
+            border-radius: 12px;
+            background: var(--shop-green);
+            color: #fff;
+        }
+
+        .shop-stock-card::after {
+            content: "";
+            position: absolute;
+            width: 330px;
+            height: 330px;
+            right: -75px;
+            bottom: -180px;
+            border: 58px solid rgba(255,255,255,.1);
+            border-radius: 50%;
+        }
+
+        .shop-stock-card__content { position: relative; z-index: 2; max-width: 720px; }
+        .shop-stock-card .shop-kicker { color: var(--shop-lime); }
+        .shop-stock-card h2 { margin: 0 0 14px; color: #fff; font-size: clamp(34px, 5vw, 56px); line-height: 1; text-transform: uppercase; }
+        .shop-stock-card p { max-width: 650px; margin: 0 0 26px; color: rgba(255,255,255,.82); line-height: 1.7; }
+        .shop-stock-card .shop-primary-btn { background: #fff; color: var(--shop-ink); }
+        .shop-stock-card .shop-primary-btn:hover { background: var(--shop-lime); }
+
+        @media (max-width: 991px) {
+            .shop-hero { padding: 70px 0; }
+            .shop-hero__photo-wrap { max-width: none; margin: 55px 0 0; }
+            .shop-hero__photo { height: 460px; }
+            .shop-hero__badge { right: 22px; }
+            .shop-catalogue { padding: 80px 0 90px; }
+            .shop-heading-row { align-items: start; flex-direction: column; }
+            .shop-toolbar { align-items: stretch; flex-direction: column; }
+            .shop-search { width: 100%; }
+            .shop-stock-section { padding-bottom: 90px; }
+        }
+
+        @media (max-width: 575px) {
+            .shop-hero { padding: 55px 0 62px; }
+            .shop-hero h1 { font-size: 46px; }
+            .shop-hero__photo { height: 390px; }
+            .shop-hero__badge { width: 116px; height: 116px; right: 12px; bottom: 18px; border-width: 5px; }
+            .shop-hero__badge strong { font-size: 20px; }
+            .shop-benefit { padding: 12px 5px; }
+            .shop-filters { display: grid; grid-template-columns: 1fr 1fr; }
+            .shop-filter { padding-inline: 8px; }
+            .shop-product-card__visual { height: 245px; }
+            .shop-stock-card { padding: 42px 26px; }
+            .footer-wrapper .contact-card .info-card { display: flex; padding-right: 0; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader-inner"><span class="loader"></span></div>
+    </div>
+
+    <div id="nav-placeholder"></div>
+
+    <main id="main-content" class="shop-page">
+        <section class="shop-hero" aria-labelledby="shop-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <ul class="shop-hero__crumbs" aria-label="Breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="fas fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Supplements shop</li>
+                        </ul>
+                        <span class="shop-kicker">The Pro Gym Shop</span>
+                        <h1 id="shop-title">Fuel every <span>rep.</span></h1>
+                        <p class="shop-hero__copy">Performance nutrition, everyday essentials and grab-and-go fuel selected for lifters, athletes and anyone working towards a stronger version of themselves.</p>
+                        <div class="shop-hero__actions">
+                            <a class="shop-primary-btn" href="#shop-products">Explore the range <i class="far fa-arrow-down" aria-hidden="true"></i></a>
+                            <a class="shop-secondary-btn" href="contact.html">Ask about stock</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="shop-hero__photo-wrap">
+                            <img class="shop-hero__photo" src="assets/img/product/IMG_4416 2.jpeg" alt="Protein, creatine, hydration products and protein snacks stocked at Pro Gym Bodmin">
+                            <div class="shop-hero__badge" aria-label="New range coming soon">
+                                <strong>New range</strong>
+                                <span>Coming soon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop-benefits" aria-label="Shop benefits">
+            <div class="container">
+                <div class="row gy-2">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="shop-benefit"><span class="shop-benefit__icon"><i class="fas fa-badge-check" aria-hidden="true"></i></span><div><strong>Trusted products</strong><span>Carefully selected brands</span></div></div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="shop-benefit"><span class="shop-benefit__icon"><i class="fas fa-bolt" aria-hidden="true"></i></span><div><strong>Training fuel</strong><span>Before, during and after</span></div></div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="shop-benefit"><span class="shop-benefit__icon"><i class="fas fa-user-headset" aria-hidden="true"></i></span><div><strong>Friendly advice</strong><span>Ask our team in the gym</span></div></div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="shop-benefit"><span class="shop-benefit__icon"><i class="fas fa-store" aria-hidden="true"></i></span><div><strong>Collect in gym</strong><span>Convenient local pickup</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop-products" class="shop-catalogue" aria-labelledby="products-title">
+            <div class="container">
+                <div class="shop-heading-row">
+                    <div><span class="shop-kicker">Shop by goal</span><h2 id="products-title">The line-up</h2></div>
+                    <p>Explore the types of supplements we’re bringing to the Pro Gym shop. Final brands, flavours, sizes and prices will be confirmed as stock arrives.</p>
+                </div>
+
+                <div class="shop-toolbar" aria-label="Product filters">
+                    <div class="shop-filters" role="group" aria-label="Filter supplements by category">
+                        <button class="shop-filter is-active" type="button" data-filter="all" aria-pressed="true">All products</button>
+                        <button class="shop-filter" type="button" data-filter="protein" aria-pressed="false">Protein</button>
+                        <button class="shop-filter" type="button" data-filter="performance" aria-pressed="false">Performance</button>
+                        <button class="shop-filter" type="button" data-filter="recovery" aria-pressed="false">Recovery</button>
+                        <button class="shop-filter" type="button" data-filter="snacks" aria-pressed="false">Snacks</button>
+                    </div>
+                    <label class="shop-search">
+                        <span class="visually-hidden">Search supplements</span>
+                        <i class="far fa-search" aria-hidden="true"></i>
+                        <input id="shop-search" type="search" placeholder="Search the range..." autocomplete="off">
+                    </label>
+                </div>
+
+                <div class="shop-results-meta"><span id="shop-result-count">6 products</span><span>Range preview</span></div>
+
+                <div id="shop-product-grid" class="row gy-4">
+                    <div class="col-sm-6 col-lg-4 shop-product-item" data-category="protein" data-name="whey protein isolate lean muscle recovery">
+                        <article class="shop-product-card">
+                            <div class="shop-product-card__visual">
+                                <span class="shop-product-card__tag">Muscle &amp; recovery</span>
+                                <div class="shop-pack shop-pack--blue"><span class="shop-pack__brand">Pro Series</span><strong>Whey<br>Protein</strong><small>High protein blend</small></div>
+                            </div>
+                            <div class="shop-product-card__body">
+                                <span class="shop-product-card__category">Protein</span>
+                                <h3>Whey Protein</h3>
+                                <p class="shop-product-card__copy">A convenient daily protein boost to support muscle growth and recovery.</p>
+                                <div class="shop-product-card__footer"><div class="shop-product-card__status"><strong>Coming soon</strong><span>Flavours to be confirmed</span></div><a class="shop-enquire-btn" href="contact.html">Enquire <i class="far fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 shop-product-item" data-category="performance" data-name="pre workout energy focus performance">
+                        <article class="shop-product-card">
+                            <div class="shop-product-card__visual">
+                                <span class="shop-product-card__tag">Energy &amp; focus</span>
+                                <div class="shop-pack shop-pack--orange"><span class="shop-pack__brand">Pro Series</span><strong>Pre<br>Workout</strong><small>Performance blend</small></div>
+                            </div>
+                            <div class="shop-product-card__body">
+                                <span class="shop-product-card__category">Performance</span>
+                                <h3>Pre-Workout</h3>
+                                <p class="shop-product-card__copy">Training-day energy and focus for the sessions that demand a little more.</p>
+                                <div class="shop-product-card__footer"><div class="shop-product-card__status"><strong>Coming soon</strong><span>Strengths to be confirmed</span></div><a class="shop-enquire-btn" href="contact.html">Enquire <i class="far fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 shop-product-item" data-category="performance" data-name="creatine monohydrate strength power performance">
+                        <article class="shop-product-card">
+                            <div class="shop-product-card__visual">
+                                <span class="shop-product-card__tag">Strength &amp; power</span>
+                                <div class="shop-pack"><span class="shop-pack__brand">Pro Series</span><strong>Pure<br>Creatine</strong><small>Monohydrate</small></div>
+                            </div>
+                            <div class="shop-product-card__body">
+                                <span class="shop-product-card__category">Performance</span>
+                                <h3>Creatine Monohydrate</h3>
+                                <p class="shop-product-card__copy">A simple training staple for supporting repeated high-intensity performance.</p>
+                                <div class="shop-product-card__footer"><div class="shop-product-card__status"><strong>Coming soon</strong><span>Sizes to be confirmed</span></div><a class="shop-enquire-btn" href="contact.html">Enquire <i class="far fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 shop-product-item" data-category="recovery" data-name="amino hydration eaas bcaas recovery electrolytes">
+                        <article class="shop-product-card">
+                            <div class="shop-product-card__visual">
+                                <span class="shop-product-card__tag">Hydration &amp; recovery</span>
+                                <div class="shop-pack shop-pack--pink"><span class="shop-pack__brand">Pro Series</span><strong>Amino<br>Fuel</strong><small>Hydration formula</small></div>
+                            </div>
+                            <div class="shop-product-card__body">
+                                <span class="shop-product-card__category">Recovery</span>
+                                <h3>Amino &amp; Hydration</h3>
+                                <p class="shop-product-card__copy">Refreshing intra-workout support for hydration and demanding training blocks.</p>
+                                <div class="shop-product-card__footer"><div class="shop-product-card__status"><strong>Coming soon</strong><span>Flavours to be confirmed</span></div><a class="shop-enquire-btn" href="contact.html">Enquire <i class="far fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 shop-product-item" data-category="protein" data-name="mass gainer protein calories muscle weight pouch">
+                        <article class="shop-product-card">
+                            <div class="shop-product-card__visual">
+                                <span class="shop-product-card__tag">Calories &amp; size</span>
+                                <div class="shop-pack shop-pack--pouch shop-pack--purple"><span class="shop-pack__brand">Pro Series</span><strong>Mass<br>Gainer</strong><small>Protein + carbohydrates</small></div>
+                            </div>
+                            <div class="shop-product-card__body">
+                                <span class="shop-product-card__category">Protein</span>
+                                <h3>Mass Gainer</h3>
+                                <p class="shop-product-card__copy">Protein and carbohydrate blends for convenient extra calories around training.</p>
+                                <div class="shop-product-card__footer"><div class="shop-product-card__status"><strong>Coming soon</strong><span>Sizes to be confirmed</span></div><a class="shop-enquire-btn" href="contact.html">Enquire <i class="far fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 shop-product-item" data-category="snacks" data-name="protein bars snacks cookies grab go high protein">
+                        <article class="shop-product-card">
+                            <div class="shop-product-card__visual">
+                                <span class="shop-product-card__tag">Grab &amp; go</span>
+                                <div class="shop-pack shop-pack--bars shop-pack--lime"><span class="shop-pack__brand">Pro Series</span><strong>Protein Bars</strong><small>High protein snack</small></div>
+                            </div>
+                            <div class="shop-product-card__body">
+                                <span class="shop-product-card__category">Snacks</span>
+                                <h3>Protein Snacks</h3>
+                                <p class="shop-product-card__copy">Bars, cookies and convenient high-protein snacks for busy days and post-workout.</p>
+                                <div class="shop-product-card__footer"><div class="shop-product-card__status"><strong>Coming soon</strong><span>Selection to be confirmed</span></div><a class="shop-enquire-btn" href="contact.html">Enquire <i class="far fa-arrow-right"></i></a></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="shop-empty" class="shop-empty mt-4" hidden><i class="far fa-search"></i><strong>No products match that search.</strong><br>Try another term or choose a different category.</div>
+            </div>
+        </section>
+
+        <section class="shop-stock-section" aria-labelledby="stock-title">
+            <div class="container">
+                <div class="shop-stock-card">
+                    <div class="shop-stock-card__content">
+                        <span class="shop-kicker">Help shape the range</span>
+                        <h2 id="stock-title">What should we stock next?</h2>
+                        <p>Looking for a particular supplement, flavour or everyday training essential? Tell us what you’d like to see in the Pro Gym shop and we’ll use member feedback when selecting new stock.</p>
+                        <a class="shop-primary-btn" href="contact.html">Send a suggestion <i class="far fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-wrapper footer-layout1" data-bg-src="assets/img/bg/footer-1-bg.png">
+        <div class="container">
+            <div class="contact-card">
+                <div class="info-card"><div class="info-card_icon"><i class="fas fa-location-dot"></i></div><div class="info-card_content"><p class="info-card_text">Gym Location</p><a href="https://www.google.com/maps/place/Pro+Gym+Bodmin/" class="info-card_link">Bodmin</a></div></div>
+                <div class="info-card"><div class="info-card_icon"><i class="fas fa-envelope"></i></div><div class="info-card_content"><p class="info-card_text">Email Address</p><a href="mailto:hello@progymbodmin.com" class="info-card_link">hello@progymbodmin.com</a></div></div>
+                <div class="info-card"><div class="info-card_icon"><i class="fas fa-phone-volume"></i></div><div class="info-card_content"><p class="info-card_text">Phone Number</p><a href="tel:+447866938399" class="info-card_link">07866 938399</a></div></div>
+            </div>
+            <div class="widget-area">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-4"><div class="widget footer-widget"><div class="widget-about"><div class="footer-logo"><a href="index.html"><img loading="lazy" src="assets/img/logo-white.svg" alt="Pro Gym Bodmin"></a></div><p class="about-text">Family-owned 24-hour gym in Bodmin, Cornwall, with high-spec equipment and a shop stocked for your training needs.</p><div class="social-btn"><a href="https://www.facebook.com/PROGYMBODMIN" aria-label="Facebook"><i class="fab fa-facebook"></i></a><a href="https://www.instagram.com/progymbodmin/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div></div></div>
+                    <div class="col-md-6 col-xl-auto"><div class="widget widget_nav_menu footer-widget"><h3 class="widget_title">Quick Links</h3><div class="menu-all-pages-container"><ul class="menu"><li><a href="index.html">Home</a></li><li><a href="pricing.html">Memberships &amp; Passes</a></li><li><a href="gallery.html">Our Equipment</a></li><li><a href="contact.html">Contact Us</a></li></ul></div></div></div>
+                    <div class="col-md-6 col-xl-auto"><div class="widget footer-widget"><h3 class="widget_title">Shop Categories</h3><div class="widget_nav_menu"><ul class="menu"><li><a href="#shop-products">Protein</a></li><li><a href="#shop-products">Performance</a></li><li><a href="#shop-products">Recovery</a></li><li><a href="#shop-products">Snacks</a></li></ul></div></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap"><div class="container"><div class="row justify-content-center"><div class="col-auto"><p class="copyright-text text-center">© 2026 All Rights Reserved. | Website built with &#9825; by <a target="_blank" href="https://story-x.co.uk/">StoryX</a></p></div></div></div></div>
+    </footer>
+
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path></svg>
+    </div>
+
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/nav-loader.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        (function () {
+            var filters = document.querySelectorAll('.shop-filter');
+            var products = document.querySelectorAll('.shop-product-item');
+            var search = document.getElementById('shop-search');
+            var count = document.getElementById('shop-result-count');
+            var empty = document.getElementById('shop-empty');
+            var activeCategory = 'all';
+
+            function updateProducts() {
+                var term = search.value.trim().toLowerCase();
+                var visible = 0;
+
+                products.forEach(function (product) {
+                    var categoryMatch = activeCategory === 'all' || product.dataset.category === activeCategory;
+                    var searchMatch = !term || product.dataset.name.indexOf(term) !== -1;
+                    var show = categoryMatch && searchMatch;
+                    product.hidden = !show;
+                    if (show) visible += 1;
+                });
+
+                count.textContent = visible + (visible === 1 ? ' product' : ' products');
+                empty.hidden = visible !== 0;
+            }
+
+            filters.forEach(function (filter) {
+                filter.addEventListener('click', function () {
+                    activeCategory = filter.dataset.filter;
+                    filters.forEach(function (button) {
+                        var selected = button === filter;
+                        button.classList.toggle('is-active', selected);
+                        button.setAttribute('aria-pressed', selected ? 'true' : 'false');
+                    });
+                    updateProducts();
+                });
+            });
+
+            search.addEventListener('input', updateProducts);
+        }());
+    </script>
+</body>
+
+</html>
