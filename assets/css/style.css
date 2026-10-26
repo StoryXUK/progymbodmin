@@ -11468,6 +11468,15 @@ span.select2-selection.select2-selection--single:focus {
   margin-bottom: -15px;
 }
 
+.home-service-section {
+  background-color: rgba(0, 0, 0, 0.25);
+  background-blend-mode: multiply;
+}
+
+.home-service-section .service-area-1 .service-card_title {
+  color: var(--white-color);
+}
+
 .service-slider-1 {
   margin-left: auto;
   margin-right: -18px;

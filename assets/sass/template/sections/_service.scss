@@ -4,6 +4,13 @@
     background-attachment: fixed;
     margin-bottom: -15px;
 }
+.home-service-section {
+    background-color: rgba(0, 0, 0, 0.25);
+    background-blend-mode: multiply;
+    .service-area-1 .service-card_title {
+        color: $white-color;
+    }
+}
 .service-slider-1 {
     margin-left: auto;
     margin-right: -18px;
